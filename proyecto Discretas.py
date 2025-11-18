@@ -134,6 +134,8 @@ def main():
         for i, ciudad in enumerate(ciudades):
             grafo.agregarNodo(i, ciudad)
 
+
+        # CREACION DE ARISTAS
         n = grafo.nodos
 
         grafo.agregarArista(n[0], n[1], 99)
@@ -209,3 +211,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
