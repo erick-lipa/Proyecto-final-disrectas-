@@ -43,7 +43,6 @@ class ListaDeAdyacencia:
         self.dist[u][v] = peso
         self.dist[v][u] = peso
 
-        # PRED CORRECTO: el predecesor de v al venir desde u es u.
         self.pred[u][v] = u
         self.pred[v][u] = v
 
@@ -58,7 +57,7 @@ class ListaDeAdyacencia:
                     if self.dist[i][k] + self.dist[k][j] < self.dist[i][j]:
                         self.dist[i][j] = self.dist[i][k] + self.dist[k][j]
 
-                        # PREDECESOR CORRECTO
+                
                         self.pred[i][j] = self.pred[k][j]
 
     def obtenerRuta(self, origen, destino):
@@ -137,7 +136,6 @@ def main():
 
         n = grafo.nodos
 
-        # CREACIÓN DE ARISTAS (MISMAS QUE TÚ INGRESASTE)
         grafo.agregarArista(n[0], n[1], 99)
         grafo.agregarArista(n[0], n[2], 122)
         grafo.agregarArista(n[0], n[3], 123)
@@ -209,4 +207,5 @@ def main():
 
 
 if __name__ == "__main__":
+
     main()
